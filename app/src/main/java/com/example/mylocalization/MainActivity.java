@@ -66,5 +66,29 @@ public class MainActivity extends AppCompatActivity {
 
         binding.dateTextView.setText(getString(R.string.dateFormat, Helper.withDateFormat(product.getDate())));
         binding.ratingTextView.setText(String.format(getString(R.string.ratingFormat), Helper.withNumberingFormat(product.getRating()), Helper.withNumberingFormat(product.getCountRating())));
+
+        setupAccessibility(product);
+    }
+
+    private void setupAccessibility(ProductModel productModel) {
+        // Access properties from productModel
+        String color = productModel.getColor();
+        String size = productModel.getSize();
+        String rating = productModel.getRating();
+        String countRating = productModel.getCountRating();
+        String store = productModel.getStore();
+
+        // Set content descriptions
+        binding.settingImageView.setContentDescription(getString(R.string.settingDescription));
+        binding.previewImageView.setContentDescription(getString(R.string.previewDescription));
+        binding.colorTextView.setContentDescription(getString(R.string.colorDescription, color));
+        binding.sizeTextView.setContentDescription(getString(R.string.sizeDescription, size));
+
+        // Format rating and countRating using the withNumberingFormat method
+        String formattedRating = Helper.withNumberingFormat(rating);
+        String formattedCountRating = Helper.withNumberingFormat(countRating);
+        binding.ratingTextView.setContentDescription(getString(R.string.ratingDescription, formattedRating, formattedCountRating));
+
+        binding.storeTextView.setContentDescription(getString(R.string.storeDescription, store));
     }
 }
