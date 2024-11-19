@@ -3,7 +3,7 @@
 ## Prequerisities
 1. Android Studio
 
-![android-studio-koala](/drawable/readme-images/android-studio-koala.png)
+![android-studio-koala](app/src/main/res/drawable/readme-images/android-studio-koala.png)
 
 > We use Android Studio Koala version for working on this project
 
@@ -20,7 +20,7 @@ Follow the installation process
 
 > Make sure to install all basic plugin before running the project
 
-![android-plugins](/drawable/readme-images/plugins.png)
+![android-plugins](app/src/main/res/drawable/readme-images/plugins.png)
 
 ## Running Project
 
@@ -33,7 +33,7 @@ Open repo directory and wait **Gradle** sync process
 
 You can add emulator by clicking **Device Manager** on right side panel of Android Studio
 
-![android-emulator](/drawable/readme-images/emulator.png)
+![android-emulator](app/src/main/res/drawable/readme-images/emulator.png)
 
 **3. Running The Project**
 
